@@ -9,6 +9,18 @@ interface Child extends Parent
     public void fun();
     public void gun();
 
+    //Java 8 onwards
+    public static void run()
+    {
+        System.out.println("Inside CHild interface method :: run ()");
+    }
+
+    //Java 8 onwards
+    public default void sun()
+    {
+        System.out.println("Inside CHild interface method :: sun ()");
+    }
+
 }
 class InterfaceDemo2 implements Child, Parent
 {
@@ -31,6 +43,13 @@ class InterfaceDemo2 implements Child, Parent
 
         System.out.println("Value of no inherited in InterfaceDemo2 class from Child :: "+Child.no);
         System.out.println("Value of no inherited in InterfaceDemo2 class from Parent :: "+Parent.no);
+
+     
+
+        Child.run();
+        cobj.sun();
+        dobj.sun();
+        
 
         
     }
